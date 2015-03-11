@@ -40,3 +40,4 @@ largestDivisible = head (filter p [1000000,99999..])
 
 numLongChains :: Int
 numLongChains = length (filter (\xs -> length xs > 15) (map chain [1..100])
+
