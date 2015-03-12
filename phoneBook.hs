@@ -20,3 +20,8 @@ findTelefone' key [] = Nothing
 findTelefone' key ((k,v):xs) = if key == k  
                             then Just v  
                             else findTelefone' key xs 
+
+-- Usando fold pattern
+findTelefone'' :: (Eq k) => k -> [(k,v)] -> Maybe v
+findTelefone'' key = foldr (\(k,v) acc -> if key == k then Just v else acc) Nothing
+
