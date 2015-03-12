@@ -8,6 +8,8 @@ phoneBook =
 	,("Mel", "99775544")
 	,("Julia", "99786623")
 	,("Mateus", "99002345")
+	,("Mel", "99224567")
+	,("Julia", "99224365")
 	]
 
 -- Unsafe: Quando não encontra nada gera exceção
@@ -24,4 +26,9 @@ findTelefone' key ((k,v):xs) = if key == k
 -- Usando fold pattern
 findTelefone'' :: (Eq k) => k -> [(k,v)] -> Maybe v
 findTelefone'' key = foldr (\(k,v) acc -> if key == k then Just v else acc) Nothing
+
+-- Caso uma pessoa tenha 2 números, concatena em uma lista
+-- Exemplo: Map.lookup "Mel" $ juntaNumerosEmUmaLista phoneBook
+juntaNumerosEmUmaLista :: (Ord k) => [(k, String)] -> Map.Map k String
+juntaNumerosEmUmaLista xs = Map.fromListWith (\numero1 numero2 -> numero1 ++ ", " ++ numero2) xs
 
