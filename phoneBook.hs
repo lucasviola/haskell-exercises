@@ -28,7 +28,7 @@ findTelefone'' :: (Eq k) => k -> [(k,v)] -> Maybe v
 findTelefone'' key = foldr (\(k,v) acc -> if key == k then Just v else acc) Nothing
 
 -- Caso uma pessoa tenha 2 números, concatena em uma lista
--- Exemplo: Map.lookup "Mel" $ juntaNumerosEmUmaLista phoneBook
+-- Exemplo: Map.lookup "Mel" $ juntaNumerosEmUmaLista phoneBook (right-associativity)
 juntaNumerosEmUmaLista :: (Ord k) => [(k, String)] -> Map.Map k String
 juntaNumerosEmUmaLista xs = Map.fromListWith (\numero1 numero2 -> numero1 ++ ", " ++ numero2) xs
 
