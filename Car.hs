@@ -12,3 +12,6 @@ data Car = Car {company :: String, model :: String, year :: Int} deriving (Show)
 -- novoCarro = Car "Ford" "Ka" 1990
 -- model novoCarro
 -- "Ka"
+
+detalhesDoCarro :: Car -> String
+detalhesDoCarro (Car {company = c, model = m, year = y}) = "Esse " ++ c ++ " " ++ m ++ " foi feito em: " ++ show y
