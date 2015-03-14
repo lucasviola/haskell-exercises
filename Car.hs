@@ -6,7 +6,10 @@ module Car
 
 -- Record Syntax: Tipo Struct
 -- Mais correto de utilizar
-data Car = Car {company :: String, model :: String, year :: Int} deriving (Show)
+data Car = Car { company :: String
+, model :: String
+, year :: Int
+} deriving (Show, Read, Eq)
 
 -- Exemplo:
 -- novoCarro = Car "Ford" "Ka" 1990
