@@ -1,4 +1,10 @@
+import Data.Char
+
 main = do
-	putStrLn "Ola, qual o seu nome?"
-	name <- getLine
-	putStrLn $ "Leia com atencao. Esse eh o seu futuro: " ++ tellFortune name
+	putStrLn "Qual o seu primeiro nome?"
+	primeiroNome <- getLine
+	putStrLn "Qual o seu segundo nome?"
+	segundoNome <- getLine
+    let primeiroNomeMaiusculo = map toUpper primeiroNome  
+        segundoNomeMaiusculo = map toUpper segundoNome 
+	putStrLn $ "Ola " ++ primeiroNomeMaiusculo ++ " " ++ segundoNomeMaiusculo ++ ", como tu andas?"
