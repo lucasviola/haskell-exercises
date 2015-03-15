@@ -11,3 +11,6 @@ main = do
 -- o forM executa o lambda que tá dentro do DO BLOCK n vezes e dá um bind do
 	-- return em cores
 -- O  mapM mapeia os numeros com as cores
+
+-- Obs: Nesse caso o return cor é redundante, pois o <- já faz o trabalho de unwrap
+-- do IO na cor
