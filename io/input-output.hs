@@ -1,5 +1,4 @@
 main = do
-	putStrLn "Olá, digite o seu nome:"
-	nome <- getLine
-	putStrLn ("Ola " ++ nome ++ ", voce chegou ate aqui. Voce eh demais.")
-	putStrLn ("Bem-vindo ao motherfucking capitulo 9!")
+	putStrLn "Ola, qual o seu nome?"
+	name <- getLine
+	putStrLn $ "Leia com atencao. Esse eh o seu futuro: " ++ tellFortune name
