@@ -2,7 +2,7 @@ main = do
 	putStrLn "Digite uma palavra ou frase para ser invertida:"
 	linha <- getLine
 	if null linha
-		then return () -- Atenção: Isso é uma Monad! Não termina a execução do programa. Transforma a linha em IO.
+		then return () -- Atenção: Isso é uma IO Action! Não termina a execução do programa. Transforma a linha em IO e retorna ela.
 		else do
 			putStrLn $ invertePalavra linha
 			main
